@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class ="jumbotron text-center">
+    <h3>Ana Sayfa</h3>
+    <hr>
+    
+    <p>@PRİNCE'in Sayfasına HOŞGELDİNİZ</p>
+    <br>
+    <h4>this page desing for criticizing artificial intelligence </h4>
+</div>
+
+
+
+
+<p>
+
+{% if request.user.is_authenticated %}
+Köle Sistemde,{{request.user.username}}
+
+{% else %}
+Sistemde AKtif Kullanıcı Bulunmuyor
+{% endif %}
+
+
+</p>
+{% endblock body %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Halil ibrahim KOÇAK/@PRİNCE</title>
+</head>
+<body>
+
+    
+</body>
+</html>

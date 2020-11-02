@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block body %}
+{% load crispy_forms_tags %}
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+  <div class="p-3 mb-2 bg-warning text-dark">
+  <h3>Makale Oluştur</h3>
+  <hr>
+
+</div>
+  <br>
+  <form method="post">
+{% csrf_token %}
+{{form.media}}
+{{form | crispy}}
+<br>
+<button type="submit" class="btn btn-dark">@Prince'i engin Bilginle Besleyenilirsin</button>
+</form>
+  
+  
+  
+  </div>
+</div>
+{% endblock body %}

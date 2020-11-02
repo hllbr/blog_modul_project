@@ -1,0 +1,50 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<a class="navbar-brand" href="">@PRİNCE</a>
+ <ul class="navbar-nav ml-auto">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+       </button>
+
+      </ul>
+ 
+  <div class="collapse navbar-collapse" id="navbarText">
+ <ul class="navbar-nav mr-auto">
+  {% if request.user.is_authenticated %}
+
+          <li class="nav-item active">
+        <a class="nav-link" href="/articles/dashboard">Kontrol Paneli<span class="sr-only">(current)</span></a>
+      </li>
+            </li>
+                     <li class="nav-item active">
+        <a class="nav-link" href="/user/logout">Kullanıcı Çıkışı<span class="sr-only">(current)</span></a>
+      </li>
+
+  
+  {% else %}
+        <li class="nav-item active">
+        <a class="nav-link" href="/user/login">Kullanıcı Giriş<span class="sr-only">(current)</span></a>
+      </li>
+  {% endif %}
+    
+      <li class="nav-item active">
+        <a class="nav-link" href="/about">Hakkımda<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/articles">Makaleler</a>
+      </li>
+
+
+                    <li class="nav-item active">
+        <a class="nav-link" href="/user/register">Kullanıcı Kayıt<span class="sr-only">(current)</span></a>
+      </li>
+   
+        </li>
+
+    </ul>
+    <span class="navbar-text">
+     
+        </span>
+     
+  </div>
+
+</nav>

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+
+<div class="p-3 mb-2 bg-secondary text-white">
+<h3>@Prince Veri Bankası Kayıt İşlem Amirliği</h3>
+</div>
+<hr>
+<div class="p-3 mb-2  bg-light text-dark"> 
+<h5>Kayıt Ol ve Bilgini Paylaş</h5>
+
+</div>
+<hr><hr>
+<form method="post">
+{% csrf_token %}
+{{form | crispy}}
+<br>
+<br>
+<button type = "submit" class="btn btn-warning">Kayıt Ol</button>
+</form>
+
+{% endblock body %}
